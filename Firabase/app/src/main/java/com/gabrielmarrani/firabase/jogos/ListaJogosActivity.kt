@@ -7,6 +7,7 @@ import android.widget.Toast
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.gabrielmarrani.firabase.CadastrarJogoActivity
+import com.gabrielmarrani.firabase.DetalheActivity
 import com.gabrielmarrani.firabase.DetalheJogoActivity
 import com.gabrielmarrani.firabase.R
 import com.gabrielmarrani.firabase.model.JogoModel
@@ -43,7 +44,7 @@ class ListaJogosActivity : AppCompatActivity() {
                 if (_lista.isNotEmpty()) {
                     _adapterJogo = ListaJogosAdapter(_lista) {
                         val intent =
-                            Intent(this@ListaJogosActivity, DetalheJogoActivity::class.java)
+                            Intent(this@ListaJogosActivity, DetalheActivity::class.java)
                         intent.putExtra("nome", it.nome)
                         intent.putExtra("data", it.data)
                         intent.putExtra("descricao", it.descricao)
