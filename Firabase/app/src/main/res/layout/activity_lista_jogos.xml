@@ -26,7 +26,7 @@
         tools:listitem="@layout/item_lista" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/btnRegistrarJogo"
+        android:id="@+id/btnCadastrarJogo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="12dp"

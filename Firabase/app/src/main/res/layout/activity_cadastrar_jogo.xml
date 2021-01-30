@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_screen"
+    android:padding="8dp"
+    tools:context=".CadastrarJogoActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:backgroundTint="@color/color_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="60dp"
+            android:orientation="vertical"
+            android:padding="12dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="nome"
+                android:textColor="#8492A6"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edtNameJogo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:backgroundTint="#8492A6"
+                android:inputType="text"
+                android:textColor="#009688"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="created_at"
+                android:textColor="#8492A6"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edtDateJogo"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:backgroundTint="#8492A6"
+                android:inputType="text"
+                android:textColor="#009688"
+                android:textCursorDrawable="@null" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="description"
+                android:textColor="#8492A6"
+                android:textSize="20sp" />
+
+            <EditText
+                android:id="@+id/edtDescriptionJogo"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:backgroundTint="#8492A6"
+                android:inputType="textMultiLine"
+                android:textColor="#009688"
+                android:textCursorDrawable="@null" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnSaveJogo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:backgroundTint="@color/colorAccent"
+                android:padding="10dp"
+                android:text="SAVE"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+
+
+    <com.mikhaellopez.circleview.CircleView
+        android:id="@+id/btnUpload"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_above="@+id/card"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-50dp"
+        android:elevation="100dp"
+        app:cv_color="@color/colorAccent" />
+
+    <ImageView
+        android:id="@+id/imageUpload"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/card"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-20dp"
+        android:elevation="150dp"
+        android:src="@drawable/ic_baseline_camera_alt_24"
+        tools:visibility="gone" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/imagemSelecionada"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_above="@+id/card"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="-45dp"
+        android:elevation="150dp"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+
+</RelativeLayout>
